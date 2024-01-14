@@ -2,6 +2,7 @@
 // Space complexity - O(max_weight) 
 
 // Input format 
+
 /*
 number of test cases 
 
@@ -11,6 +12,7 @@ for each test case :
     value list 
     knapsack weight 
 */
+
 #include<bits/stdc++.h>
 using namespace std;
 
