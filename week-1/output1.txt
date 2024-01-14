@@ -1,0 +1,4 @@
+case 1: 14
+case 2: 174
+case 3: 177
+case 4: 193
