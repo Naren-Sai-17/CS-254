@@ -1,0 +1,1 @@
+Two smallest elements are: 0 0
