@@ -1,3 +1,5 @@
+// compile with -std=c++20 flag as __bit_ceil function was used
+
 #include<bits/stdc++.h>
 using namespace std;
 
