@@ -1,6 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+const int inf = 1e9; 
+
 int minCost(int n, int m, int mask, int prev, int color,vector<vector<pair<int,int>>> &graph,vector<vector<pair<int,int>>> &dp)
 {
     if (mask == ((1 << n) - 1))
@@ -9,7 +11,7 @@ int minCost(int n, int m, int mask, int prev, int color,vector<vector<pair<int,i
         return dp[mask][prev].first; 
     if(color == 1 && dp[mask][prev].second != 0) 
         return dp[mask][prev].second; 
-    int ans = INT_MAX;   
+    int ans = inf;   
     for (int i = 0; i < n; i++)
     {
         if(color == 1 && graph[prev][i].first && !(mask & (1<<i)))
@@ -39,12 +41,12 @@ int main()
         else
             graph[u][v].second = graph[v][u].second = w; 
     }
-    int ans = INT_MAX; 
+    int ans = inf; 
     for(int i = 0; i < n; i++)
     {
         ans = min(ans, minCost(n,m,1<<i,i,1,graph,dp)); 
         ans = min(ans, minCost(n,m,1<<i,i,0,graph,dp)); 
     }
-    if(ans == INT_MAX) ans = -1; 
+    if(ans == inf) ans = -1; 
     cout<<ans<<"\n"; 
 }
